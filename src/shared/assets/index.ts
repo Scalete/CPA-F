@@ -1,0 +1,1 @@
+export { assetPaths } from './paths'
