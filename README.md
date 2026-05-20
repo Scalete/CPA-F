@@ -131,6 +131,7 @@ export { HomePage as default } from '@pages/home'
 | Импорт | Содержимое |
 |--------|------------|
 | `@shared/api` | `apiClient`, `createLocaleApiClient`, `apiFetch` |
+| `@shared/types` | Общие TypeScript-типы: API responses, locales, loading states, common props |
 | `@shared/assets` | `assetPaths` — типизированные URL статики |
 | `@shared/ui/icon` | SVG-иконки (`ChevronDownIcon`, `IconProps`, …) |
 | `@shared/lib/gsap` | `gsap`, `ScrollTrigger` |
