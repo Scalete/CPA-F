@@ -1,12 +1,10 @@
-import { createLocaleApiClient } from './client'
+import type { ApiFetchOptions } from '@shared/types'
 
-interface FetchOptions {
-  locale?: string
-}
+import { createLocaleApiClient } from './client'
 
 export async function apiFetch<T>(
   path: string,
-  { locale = 'en' }: FetchOptions = {}
+  { locale = 'en' }: ApiFetchOptions = {}
 ): Promise<T> {
   const client = createLocaleApiClient(locale)
   const { data } = await client.get<T>(path)

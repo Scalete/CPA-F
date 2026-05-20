@@ -132,15 +132,16 @@ export { HomePage as default } from '@pages/home'
 
 ### Готовые модули (shared)
 
-| Импорт                         | Содержимое                                       |
-| ------------------------------ | ------------------------------------------------ |
-| `@shared/api`                  | `apiClient`, `createLocaleApiClient`, `apiFetch` |
-| `@shared/assets`               | `assetPaths` — типизированные URL статики        |
-| `@shared/ui/icon`              | SVG-иконки (`ChevronDownIcon`, `IconProps`, …)   |
-| `@shared/lib/gsap`             | `gsap`, `ScrollTrigger`                          |
-| `@shared/lib/react-hook-form`  | `useForm`, `FormProvider`, …                     |
-| `@shared/config/i18n`          | локали, `routing`                                |
-| `@shared/config/api`           | `API_URL`, `API_KEY`                             |
+| Импорт | Содержимое |
+|--------|------------|
+| `@shared/api` | `apiClient`, `createLocaleApiClient`, `apiFetch` |
+| `@shared/types` | Общие TypeScript-типы: API responses, locales, loading states, common props |
+| `@shared/assets` | `assetPaths` — типизированные URL статики |
+| `@shared/ui/icon` | SVG-иконки (`ChevronDownIcon`, `IconProps`, …) |
+| `@shared/lib/gsap` | `gsap`, `ScrollTrigger` |
+| `@shared/lib/react-hook-form` | `useForm`, `FormProvider`, … |
+| `@shared/config/i18n` | локали, `routing` |
+| `@shared/config/api` | `API_URL`, `API_KEY` |
 | `@shared/config/design-tokens` | палитра и градиенты (справочник)                 |
 
 Переводы: `messages/en.json`, `messages/ru.json`. Роутинг локалей: `middleware.ts`, `src/shared/config/routing.ts` (`localePrefix: 'as-needed'` → `/` без префикса для EN).
