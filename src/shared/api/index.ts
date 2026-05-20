@@ -1,2 +1,4 @@
 export { apiClient, createLocaleApiClient } from './client'
-export { apiFetch } from './base'
+export { ApiError, isApiError, normalizeApiError } from './errors'
+export type { ApiErrorPayload } from './errors'
+export { getBenefits, getMultiply, getTasks, submitForm } from './endpoints'
