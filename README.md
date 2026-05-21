@@ -138,6 +138,7 @@ export { HomePage as default } from '@pages/home'
 | `@shared/types` | Общие TypeScript-типы: API responses, locales, loading states, common props |
 | `@shared/assets` | `assetPaths` — типизированные URL статики |
 | `@shared/ui/icon` | SVG-иконки (`ChevronDownIcon`, `IconProps`, …) |
+| `@shared/ui/container` | Общий layout-контейнер для ограничения ширины контента и адаптивных боковых отступов |
 | `@shared/lib/gsap` | `gsap`, `ScrollTrigger` |
 | `@shared/lib/react-hook-form` | `useForm`, `FormProvider`, … |
 | `@shared/config/i18n` | локали, `routing` |
