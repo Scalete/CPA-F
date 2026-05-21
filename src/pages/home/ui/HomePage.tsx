@@ -4,6 +4,8 @@ import { getLocale, getTranslations } from 'next-intl/server'
 import { getBenefits } from '@shared/api'
 import type { ApiLocale } from '@shared/types'
 
+import { LayoutContainer } from '@shared/ui/layout-container'
+
 import styles from './HomePage.module.scss'
 
 export async function HomePage() {
@@ -14,7 +16,9 @@ export async function HomePage() {
 
   return (
     <main className={clsx(styles.main, 'bg-gradient-brand')}>
-      <h1 className={clsx(styles.title, 'text-accent')}>{t('hello')}</h1>
+      <LayoutContainer>
+        <h1 className={clsx(styles.title, 'text-accent')}>{t('hello')}</h1>
+      </LayoutContainer>
     </main>
   )
 }
