@@ -1,5 +1,7 @@
-import { createLocaleApiClient } from '@shared/api/client'
-import type { ApiLocale, TasksResponse } from '@shared/types'
+import { createLocaleApiClient } from '@shared/api'
+import type { ApiLocale } from '@shared/types'
+
+import type { TasksResponse } from '../model/types'
 
 export async function getTasks(
   locale: ApiLocale = 'en'

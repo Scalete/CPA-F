@@ -140,7 +140,11 @@ export { HomePage as default } from '@pages/home'
 
 | Импорт | Содержимое |
 |--------|------------|
-| `@shared/api` | `apiClient`, `createLocaleApiClient`, `getBenefits`, `getMultiply`, `getTasks`, `submitForm`, `ApiError` |
+| `@shared/api` | `apiClient`, `createLocaleApiClient`, `ApiError` |
+| `@widgets/multi-benefits` | `getBenefits`, `BenefitsResponse` |
+| `@widgets/multi-tasks` | `getTasks`, `TasksResponse` |
+| `@widgets/multiply-with-us` | `getMultiply`, `MultiplyResponse` |
+| `@features/contact-form` | `submitForm`, `FormPayload` |
 | `@shared/types` | Общие TypeScript-типы: API responses, locales, loading states, common props |
 | `@shared/assets` | `assetPaths` — типизированные URL статики |
 | `@shared/ui/icon` | SVG-иконки (`ChevronDownIcon`, `IconProps`, …) |

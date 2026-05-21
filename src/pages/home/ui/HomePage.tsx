@@ -1,17 +1,11 @@
-import clsx from 'clsx'
-import { getLocale, getTranslations } from 'next-intl/server'
-
-import { getBenefits } from '@shared/api'
-import type { ApiLocale } from '@shared/types'
+import { clsx } from 'clsx'
+import { getTranslations } from 'next-intl/server'
 
 import { LayoutContainer } from '@shared/ui/layout-container'
 
 import styles from './HomePage.module.scss'
 
 export async function HomePage() {
-  const benefits = await getBenefits((await getLocale()) as ApiLocale)
-  console.log('benefits', benefits)
-
   const t = await getTranslations('home')
 
   return (

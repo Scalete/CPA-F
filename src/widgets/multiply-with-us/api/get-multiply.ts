@@ -1,5 +1,7 @@
-import { createLocaleApiClient } from '@shared/api/client'
-import type { ApiLocale, MultiplyResponse } from '@shared/types'
+import { createLocaleApiClient } from '@shared/api'
+import type { ApiLocale } from '@shared/types'
+
+import type { MultiplyResponse } from '../model/types'
 
 export async function getMultiply(
   locale: ApiLocale = 'en'
