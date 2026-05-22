@@ -1,7 +1,9 @@
 import type { Locale } from './locale'
 
+export type ApiLocale = Extract<Locale, 'en' | 'ru'>
+
 export type ApiFetchOptions = {
-  locale?: Locale
+  locale?: ApiLocale
 }
 
 export type ApiResponse<T> = {

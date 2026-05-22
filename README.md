@@ -43,14 +43,20 @@ npm run lint    # ESLint + FSD boundaries
 
 ## Environment variables
 
-Создайте `.env.local`:
+Скопируйте `.env.example` → `.env.local` и укажите ключ (значение из ТЗ / swagger):
+
+```bash
+cp .env.example .env.local
+```
 
 ```env
 NEXT_PUBLIC_API_URL=https://cpa-server-vtel.onrender.com
-NEXT_PUBLIC_API_KEY=prodcpakey333
+NEXT_PUBLIC_API_KEY=<ваш ключ>
 ```
 
-Без файла используется дефолтный URL из `src/shared/config/api.ts`; ключ нужен для реальных запросов.
+- `.env.local` в `.gitignore` — в репозиторий не попадает.
+- В `src/shared/config/api.ts` в git только публичный URL как fallback; **ключ только из env**.
+- Префикс `NEXT_PUBLIC_` означает, что значение попадает в клиентский бандл Next.js и видно в браузере (Network / исходники). Для этого проекта API вызывается с клиента, поэтому «секрет» в классическом смысле недостижим — env нужен, чтобы не хранить ключ в исходниках и не коммитить его в git.
 
 ## Architecture (Feature-Sliced Design)
 
@@ -134,7 +140,11 @@ export { HomePage as default } from '@pages/home'
 
 | Импорт | Содержимое |
 |--------|------------|
-| `@shared/api` | `apiClient`, `createLocaleApiClient`, `apiFetch` |
+| `@shared/api` | `apiClient`, `createLocaleApiClient`, `ApiError` |
+| `@widgets/multi-benefits` | `getBenefits`, `BenefitsResponse` |
+| `@widgets/multi-tasks` | `getTasks`, `TasksResponse` |
+| `@widgets/multiply-with-us` | `getMultiply`, `MultiplyResponse` |
+| `@features/contact-form` | `submitForm`, `FormPayload` |
 | `@shared/types` | Общие TypeScript-типы: API responses, locales, loading states, common props |
 | `@shared/assets` | `assetPaths` — типизированные URL статики |
 | `@shared/ui/icon` | SVG-иконки (`ChevronDownIcon`, `IconProps`, …) |

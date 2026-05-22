@@ -1,5 +1,6 @@
 export type {
   ApiFetchOptions,
+  ApiLocale,
   ApiPostResponse,
   ApiResponse,
 } from './api'
