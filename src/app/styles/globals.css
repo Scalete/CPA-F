@@ -3,71 +3,10 @@
 @tailwind utilities;
 
 :root {
-  /* Background — Figma: Dark #14091a, #0C090E */
-  --color-bg: #14091a;
-  --color-bg-deep: #0c090e;
-  --color-bg-elevated: #1a0822;
-  --color-bg-surface: #210031;
-  --color-bg-muted: #2a043d;
-  --color-bg-overlay: rgba(20, 9, 26, 0.92);
-
-  /* Accent — Figma paint style "Yell", buttons #fee97d */
-  --color-accent: #fee97d;
-  --color-accent-foreground: #14091a;
-
-  /* Brand — Figma paint style "main" + gradient stops */
-  --color-brand-orange: #dc8400;
-  --color-brand-purple: #9500dc;
-  --color-brand-main: #9e13e0;
-  --color-brand-mid: #560080;
-  --color-brand-deep: #220032;
-  --color-brand-bright: #a30ee9;
-  --color-brand-dark: #8a00cc;
-
-  /* Text — Figma "W" */
-  --color-text: #ffffff;
-  --color-text-muted: rgba(255, 255, 255, 0.65);
-  --color-text-subtle: rgba(255, 255, 255, 0.4);
-
-  /* Gradients — Figma BG (orange→purple) & Info card */
-  --gradient-brand: linear-gradient(
-    135deg,
-    var(--color-brand-orange) 0%,
-    var(--color-brand-mid) 56%,
-    var(--color-brand-deep) 100%
-  );
-  --gradient-brand-purple: linear-gradient(
-    135deg,
-    var(--color-brand-purple) 0%,
-    var(--color-brand-mid) 56%,
-    var(--color-brand-deep) 100%
-  );
-  --gradient-brand-horizontal: linear-gradient(
-    90deg,
-    var(--color-brand-orange) 0%,
-    var(--color-brand-purple) 45%,
-    var(--color-brand-mid) 75%,
-    var(--color-brand-deep) 100%
-  );
-  --gradient-info: linear-gradient(
-    135deg,
-    var(--color-brand-bright) 0%,
-    var(--color-brand-dark) 100%
-  );
-  --gradient-overlay: linear-gradient(180deg, rgba(20, 9, 26, 0) 0%, var(--color-bg-overlay) 100%);
-
-  /* Typography — Figma text styles */
-  --text-body: 20px;
-  --text-button: 23px;
-  --text-lead: 24px;
-  --leading-body: 24px;
-
-  /* Layout */
-  --container-max: 1280px;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 32px;
+  --color-brand: #00ff88;
+  --color-brand-dark: #00cc6a;
+  --color-bg: #0a0a0a;
+  --color-bg-overlay: rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -79,7 +18,7 @@
 html,
 body {
   background-color: var(--color-bg);
-  color: var(--color-text);
+  color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -93,9 +32,6 @@ h6 {
 }
 
 ::selection {
-  background: var(--color-accent);
-  color: var(--color-accent-foreground);
-}
-
-@layer components {
+  background: var(--color-brand);
+  color: #000;
 }
