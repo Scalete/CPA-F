@@ -60,6 +60,7 @@ const config: Config = {
       },
       screens: {
         xs: '375px',
+        hero: '1000px',
       },
     },
   },

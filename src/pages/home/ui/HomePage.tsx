@@ -1,18 +1,9 @@
-import { clsx } from 'clsx'
-import { getTranslations } from 'next-intl/server'
+import { HomeSection } from '@widgets/home-section'
 
-import { LayoutContainer } from '@shared/ui/layout-container'
-
-import styles from './HomePage.module.scss'
-
-export async function HomePage() {
-  const t = await getTranslations('home')
-
+export const HomePage = () => {
   return (
-    <main className={clsx(styles.main, 'bg-gradient-brand')}>
-      <LayoutContainer>
-        <h1 className={clsx(styles.title, 'text-accent')}>{t('hello')}</h1>
-      </LayoutContainer>
+    <main className="min-h-dvh min-w-[375px] overflow-x-hidden">
+      <HomeSection />
     </main>
   )
 }
