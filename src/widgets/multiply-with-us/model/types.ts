@@ -9,8 +9,10 @@ export type MultiplySteps = {
 }
 
 export type MultiplyItem = {
-  title: MultiplyAudience
+  key: string
+  title: string
   steps: MultiplySteps
+  ctaLabel: string
 }
 
 export type MultiplyResponse = MultiplyItem[]

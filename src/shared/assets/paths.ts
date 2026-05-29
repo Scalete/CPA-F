@@ -4,7 +4,7 @@
  */
 export const assetPaths = {
   images: {
-    // hero: '/assets/images/hero.png',
+    snake4: '/assets/images/snake-4.png',
   },
   icons: {
     // telegram: '/assets/icons/telegram.png',

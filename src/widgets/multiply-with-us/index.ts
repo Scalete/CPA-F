@@ -5,3 +5,4 @@ export type {
   MultiplyResponse,
   MultiplySteps,
 } from './model/types'
+export { MultiplyWithUs } from './ui/MultiplyWithUs'

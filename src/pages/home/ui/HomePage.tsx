@@ -1,6 +1,8 @@
 import { clsx } from 'clsx'
 import { getTranslations } from 'next-intl/server'
 
+import { MultiplyWithUs } from '@widgets/multiply-with-us'
+
 import { LayoutContainer } from '@shared/ui/layout-container'
 
 import styles from './HomePage.module.scss'
@@ -11,7 +13,7 @@ export async function HomePage() {
   return (
     <main className={clsx(styles.main, 'bg-gradient-brand')}>
       <LayoutContainer>
-        <h1 className={clsx(styles.title, 'text-accent')}>{t('hello')}</h1>
+        <MultiplyWithUs />
       </LayoutContainer>
     </main>
   )
