@@ -35,7 +35,8 @@ export function LinkButton(props: LinkButtonProps) {
   const classes = getLinkButtonClassName(variant, active, className)
 
   if (rest.as === 'button') {
-    const { as: _as, ...buttonProps } = rest
+    const { as, ...buttonProps } = rest
+    void as
 
     return (
       <button className={classes} type="button" {...buttonProps}>
@@ -44,7 +45,8 @@ export function LinkButton(props: LinkButtonProps) {
     )
   }
 
-  const { as: _as, href, ...anchorProps } = rest
+  const { as, href, ...anchorProps } = rest
+  void as
 
   return (
     <a className={classes} href={href} {...anchorProps}>

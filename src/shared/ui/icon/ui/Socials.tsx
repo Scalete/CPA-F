@@ -1,4 +1,5 @@
 import { FC } from 'react'
+
 import { IconProps } from '../model/types'
 
 export const InstagramSvg: FC<IconProps> = ({ className, width = 40, height = 40, ...props }) => {

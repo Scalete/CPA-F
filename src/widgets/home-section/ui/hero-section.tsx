@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl'
 import { useEffect, useState } from 'react'
 
 import { LanguageSwitcher } from '@features/language-switcher'
+
 import { ButtonSvg, InstagramSvg, LinkedinSvg, LogoSvg, TelegramSvg } from '@shared/ui/icon'
 import { LayoutContainer } from '@shared/ui/layout-container'
 import { LinkButton } from '@shared/ui/link-button'
