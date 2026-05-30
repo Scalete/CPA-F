@@ -1,4 +1,7 @@
 export type { IconProps } from './model/types'
 export { ChevronDownIcon } from './ui/ChevronDownIcon'
+export { LogoSvg } from './ui/Logo'
+export { ButtonSvg } from './ui/Button'
+export { InstagramSvg, TelegramSvg, LinkedinSvg } from './ui/Socials'
 export { ArrowIcon } from './ui/ArrowIcon'
 export { VerticalArrowIcon } from './ui/VerticalArrowIcon'

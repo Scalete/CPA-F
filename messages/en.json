@@ -1,6 +1,21 @@
 {
   "home": {
-    "hello": "Hello World"
+    "nav": {
+      "main": "Main",
+      "team": "Team",
+      "benefits": "Benefits",
+      "join": "Join Us"
+    },
+    "menu": {
+      "open": "Open menu",
+      "close": "Close menu",
+      "mobile": "Menu"
+    },
+    "hero": {
+      "title": "PRACTICE MAKES PROFIT",
+      "description": "We provide effective solutions, tested and refined on our own products and ad budgets",
+      "primaryCta": "Get in touch"
+    }
   },
   "multiplySection": {
     "heading": "Multiply With Us",
