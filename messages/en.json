@@ -16,5 +16,26 @@
       "description": "We provide effective solutions, tested and refined on our own products and ad budgets",
       "primaryCta": "Get in touch"
     }
+  },
+  "multiplySection": {
+    "heading": "Multiply With Us",
+    "audience": {
+      "for_media_buyers": "For Media Buyers",
+      "for_businesses": "For Businesses",
+      "for_partners": "For Partners"
+    },
+    "cta": {
+      "for_media_buyers": "Join the team",
+      "for_businesses": "Launch now",
+      "for_partners": "Partner up"
+    }
+  },
+  "footer": {
+    "scrollToTop": "Scroll to Top",
+    "socials": {
+      "instagram": "instagram",
+      "telegram": "telegram",
+      "linkedin": "linkedin"
+    }
   }
 }

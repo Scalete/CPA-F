@@ -1,0 +1,84 @@
+.tabButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: auto;
+  padding: 26px 53px;
+
+  border: 3px solid var(--color-accent);
+  border-radius: 999px;
+  background: transparent;
+
+  color: var(--color-accent);
+  font-family: var(--font-display), sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+          background-color 0.15s ease,
+          color 0.15s ease,
+          border-color 0.15s ease;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+}
+
+.active {
+  background: var(--color-accent);
+  color: var(--color-bg-deep);
+  border-color: var(--color-bg-deep);
+}
+
+@media (hover: hover) {
+  .tabButton:not(:disabled):not(.active):hover {
+    background: var(--color-accent);
+    color: var(--color-bg-deep);
+  }
+}
+
+@media (max-width: 1330px) {
+  .tabButton {
+    gap: 30px;
+    padding: 22px 44px;
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tabButton {
+    width: fit-content;
+    gap: 12px;
+    padding: 16px 33px;
+    font-size: 20px;
+
+    svg {
+      width: 30px;
+      height: 24px;
+    }
+  }
+}
+
+@media (max-width: 480px), ((max-height: 780px) and (width <= 1024px)) {
+  .tabButton {
+    padding: 12px 33px;
+    font-size: 16px;
+  }
+}

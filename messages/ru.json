@@ -16,5 +16,26 @@
       "description": "Предлагаем эффективные решения, которые уже протестили на своих продуктах и бюджетах",
       "primaryCta": "Получить профит"
     }
+  },
+  "multiplySection": {
+    "heading": "Умножай с нами",
+    "audience": {
+      "for_media_buyers": "Медиабаерам",
+      "for_businesses": "Бизнесу",
+      "for_partners": "Партнёрам"
+    },
+    "cta": {
+      "for_media_buyers": "Присоединиться",
+      "for_businesses": "Запустить",
+      "for_partners": "Стать партнёром"
+    }
+  },
+  "footer": {
+    "scrollToTop": "Наверх ↑",
+    "socials": {
+      "instagram": "instagram",
+      "telegram": "telegram",
+      "linkedin": "linkedin"
+    }
   }
 }
