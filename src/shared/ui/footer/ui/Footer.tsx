@@ -1,12 +1,13 @@
 'use client'
 
 import { clsx } from 'clsx'
-import Link from 'next/link'
 import { useTranslations } from 'next-intl'
+
+import { LinkButton } from '@shared/ui/link-button'
 
 import styles from './Footer.module.scss'
 
-export type FooterProps = {
+interface FooterProps  {
   className?: string
 }
 
@@ -16,11 +17,19 @@ export function Footer({ className }: FooterProps) {
   return (
     <footer className={clsx(styles.footer, className)}>
       <div className={styles.socials}>
-        <Link href="instagram" className={styles.socialLink}>Instagram</Link>
-        <Link href="telegram" className={styles.socialLink}>Telegram</Link>
-        <Link href="linkedin" className={styles.socialLink}>Linkedin</Link>
+        <LinkButton href="https://www.instagram.com/">
+          {t('socials.instagram')}
+        </LinkButton>
+        <LinkButton href="https://t.me/">
+          {t('socials.telegram')}
+        </LinkButton>
+        <LinkButton href="https://www.linkedin.com/">
+          {t('socials.linkedin')}
+        </LinkButton>
       </div>
-      <span className={styles.scrollUp}>{t('scrollToTop')}</span>
+      <LinkButton as='button'>
+        {t('scrollToTop')}
+      </LinkButton>
     </footer>
   )
 }

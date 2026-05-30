@@ -7,12 +7,13 @@ import { useMemo, useState } from 'react'
 import { assetPaths } from '@shared/assets'
 import { Footer } from '@shared/ui/footer'
 import { TabButton } from '@shared/ui/tab-button'
+import { Title } from '@shared/ui/title'
 
 import { MultiplyCard } from './MultiplyCard'
 import styles from './MultiplySection.module.scss'
 import { MultiplyItem } from '../model/types'
 
-type MultiplySectionViewProps = {
+interface MultiplySectionViewProps {
   heading: string
   data: MultiplyItem[]
 }
@@ -34,7 +35,7 @@ export function MultiplySectionView({ heading, data }: MultiplySectionViewProps)
   }
 
   return (
-    <section className={styles.section}>
+    <div className={styles.section}>
       <div className={styles.inner}>
         <Image
           className={styles.snake}
@@ -45,7 +46,7 @@ export function MultiplySectionView({ heading, data }: MultiplySectionViewProps)
           aria-hidden="true"
         />
 
-        <h2 className={styles.title}>{heading}</h2>
+        <Title className={styles.title}>{heading}</Title>
 
         <div className={styles.columns}>
           <div className={styles.tabList} role="group" aria-label={heading}>
@@ -76,6 +77,6 @@ export function MultiplySectionView({ heading, data }: MultiplySectionViewProps)
 
         <Footer className={styles.footerMobile} />
       </div>
-    </section>
+    </div>
   )
 }

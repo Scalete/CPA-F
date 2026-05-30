@@ -1,9 +1,8 @@
-import { VerticalArrowIcon } from '@shared/ui/icon'
-import { VolumeButton } from '@shared/ui/volume-button'
+import { ButtonSvg, VerticalArrowIcon } from '@shared/ui/icon'
 
 import styles from './MultiplyCard.module.scss'
 
-type MultiplyCardProps = {
+interface MultiplyCardProps {
   step1: string
   step2: string
   ctaLabel: string
@@ -28,11 +27,9 @@ export function MultiplyCard({
         <VerticalArrowIcon />
       </div>
 
-      <VolumeButton
-        onClick={() => {}}
-      >
+      <ButtonSvg>
         <span className={styles.ctaText}>{ctaLabel}</span>
-      </VolumeButton>
+      </ButtonSvg>
     </div>
   )
 }
