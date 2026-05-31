@@ -62,6 +62,9 @@ const config: Config = {
         xs: '375px',
         hero: '1000px',
       },
+      minHeight: {
+        screen: 'max(100dvh, var(--screen-min-height))',
+      },
     },
   },
   plugins: [],
