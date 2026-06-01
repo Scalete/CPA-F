@@ -37,7 +37,7 @@ export function HomeSection() {
             className="font-display text-2xl font-bold tracking-tight text-accent sm:text-3xl"
             href="/"
           >
-            <LogoSvg className="w-11 h-6 sm:w-11 sm:h-10" />
+            <LogoSvg className="w-11 h-6 sm:w-11 sm:h-10 text-white" />
           </Link>
 
           <nav className="hidden items-center gap-10 lg:flex">
