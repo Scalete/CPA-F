@@ -1,0 +1,78 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  background: transparent;
+  border: 1px solid #9e13e04d;
+  border-radius: 8px;
+  transition: border-color 0.15s;
+
+  &:focus-within {
+    border-color: #9e13e0;
+  }
+}
+
+.wrapperError {
+  border-color: red;
+}
+
+.input {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-bg-deep);
+
+  /* Single-space placeholder keeps :placeholder-shown working */
+  &::placeholder {
+    color: transparent;
+  }
+
+  /* Once the user types, the fake placeholder hides itself */
+  &:not(:placeholder-shown) ~ .placeholder {
+    display: none;
+  }
+}
+
+/* Real DOM element so the required * can be styled independently */
+.placeholder {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 0;
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--color-bg-deep);
+  white-space: nowrap;
+}
+
+.requiredMark {
+  color: var(--color-brand-main);
+  font-weight: 400;
+}
+
+.errorMsg {
+  margin-top: 4px;
+  font-family: var(--font-main), sans-serif;
+  font-size: 16px;
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .input,
+  .placeholder,
+  .errorMsg{
+    font-size: 14px;
+  }
+}

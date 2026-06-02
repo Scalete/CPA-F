@@ -1,13 +1,15 @@
-import { getTranslations } from 'next-intl/server'
+import { HomeSection } from '@widgets/home-section'
+import { MultiBenefits } from '@widgets/multi-benefits'
+import { MultiTasks } from '@widgets/multi-tasks'
+import { MultiplyWithUs } from '@widgets/multiply-with-us'
 
-import styles from './HomePage.module.scss'
-
-export async function HomePage() {
-  const t = await getTranslations('home')
-
+export const HomePage = () => {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{t('hello')}</h1>
+    <main className="min-h-dvh min-w-[375px] overflow-x-hidden">
+      <HomeSection />
+      <MultiTasks />
+      <MultiBenefits />
+      <MultiplyWithUs />
     </main>
   )
 }

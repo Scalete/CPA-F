@@ -1,5 +1,70 @@
 {
   "home": {
-    "hello": "Привет, мир"
+    "nav": {
+      "main": "Главная",
+      "team": "Команда",
+      "benefits": "Преимущества",
+      "join": "С нами"
+    },
+    "menu": {
+      "open": "Открыть меню",
+      "close": "Закрыть меню",
+      "mobile": "Меню"
+    },
+    "hero": {
+      "title": "PRACTICE MAKES PROFIT",
+      "description": "Предлагаем эффективные решения, которые уже протестили на своих продуктах и бюджетах",
+      "primaryCta": "Получить профит"
+    }
+  },
+  "multiTasksSection": {
+    "heading": "Multi-Tasks"
+  },
+  "multiplySection": {
+    "heading": "Умножай с нами",
+    "audience": {
+      "for_media_buyers": "Медиабаерам",
+      "for_businesses": "Бизнесу",
+      "for_partners": "Партнёрам"
+    },
+    "cta": {
+      "for_media_buyers": "Присоединиться",
+      "for_businesses": "Запустить",
+      "for_partners": "Стать партнёром"
+    }
+  },
+  "applicationForm": {
+    "fields": {
+      "namePlaceholder": "Ваше имя",
+      "contactMethodPlaceholder": "Способ связи",
+      "contactPlaceholder": "Ваш контакт"
+    },
+    "validation": {
+      "nameMin": "Минимум 2 символа",
+      "contactMethodRequired": "Выберите способ",
+      "contactMin": "Введите контакт",
+      "contactInvalidEmail": "Введите корректный email",
+      "contactInvalidTelegram": "Введите корректный Telegram: @username",
+      "contactInvalidPhone": "Введите корректный номер телефона"
+    },
+    "hintStartPart": "Поля со звёздочкой (",
+    "hintEndPart": ") обязательны",
+    "hintMark": "*",
+    "submit": "Отправить",
+    "submitting": "Отправляем…",
+    "close": "Закрыть",
+    "done": "Готово",
+    "success": {
+      "title": "МЫ ПОЛУЧИЛИ ВАШУ ЗАЯВКУ!",
+      "text": "Мы обработаем запрос и свяжемся с вами"
+    }
+  },
+  "footer": {
+    "scrollToTop": "Наверх ↑",
+    "socials": {
+      "instagram": "instagram",
+      "telegram": "telegram",
+      "linkedin": "linkedin"
+    }
   }
 }

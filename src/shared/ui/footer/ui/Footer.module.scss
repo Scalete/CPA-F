@@ -1,0 +1,17 @@
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+
+  &.footerCompact {
+    display: none;
+    margin-top: 31px;
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
