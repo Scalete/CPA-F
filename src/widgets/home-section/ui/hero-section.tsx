@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 
 import { LanguageSwitcher } from '@features/language-switcher'
 
+import { assetPaths } from '@shared/assets'
 import { ButtonSvg, InstagramSvg, LinkedinSvg, LogoSvg, TelegramSvg } from '@shared/ui/icon'
 import { LayoutContainer } from '@shared/ui/layout-container'
 import { LinkButton } from '@shared/ui/link-button'
@@ -31,7 +32,7 @@ export function HomeSection() {
     <section className="relative bg-brand-mid overflow-hidden sm:bg-gradient-brand text-text">
       <div className="absolute inset-0 bg-gradient-overlay" />
 
-      <LayoutContainer className="relative z-10 flex min-h-screen flex-col py-6 sm:py-8 lg:py-10">
+      <LayoutContainer className="relative z-10 flex h-full min-h-full flex-col py-6 sm:py-8 lg:py-10">
         <header className="flex items-center justify-between">
           <Link
             className="font-display text-2xl font-bold tracking-tight text-accent sm:text-3xl"
@@ -74,7 +75,13 @@ export function HomeSection() {
           </div>
 
           <div>
-            <Image src="/assets/images/snake.png" alt="" width={889} height={911} priority />
+            <Image
+              src={assetPaths.images.snake}
+              alt=""
+              width={889}
+              height={911}
+              priority
+            />
           </div>
         </div>
 

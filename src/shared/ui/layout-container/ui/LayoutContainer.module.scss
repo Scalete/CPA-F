@@ -3,6 +3,12 @@
   max-width: 1440px;
   margin-inline: auto;
   padding-inline: 52px;
+  min-height: 100dvh;
+
+  @media (min-width: 1024px) {
+    height: max(100dvh, var(--screen-min-height));
+    min-height: max(100dvh, var(--screen-min-height));
+  }
 
   @media (max-width: 1320px) {
     padding-inline: 32px;
@@ -10,6 +16,7 @@
 
   @media (max-width: 1024px) {
     padding-inline: 24px;
+    height: auto;
   }
 
   @media (max-width: 768px) {
