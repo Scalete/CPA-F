@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { useMemo, useState } from 'react'
 
 import { assetPaths } from '@shared/assets'
+import { ApplicationModal } from '@shared/ui/application-form'
 import { Footer } from '@shared/ui/footer'
 import { TabButton } from '@shared/ui/tab-button'
 import { Title } from '@shared/ui/title'
@@ -26,6 +27,8 @@ const tabClasses = [
 
 export function MultiplySectionView({ heading, data }: MultiplySectionViewProps) {
   const [activeKey, setActiveKey] = useState(data[0]?.key ?? '')
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   const activeItem = useMemo(() => {
     return data.find((item) => item.key === activeKey) ?? data[0]
   }, [data, activeKey])
@@ -35,48 +38,56 @@ export function MultiplySectionView({ heading, data }: MultiplySectionViewProps)
   }
 
   return (
-    <div className={styles.section}>
-      <div className={styles.inner}>
-        <Image
-          className={styles.snake}
-          src={assetPaths.images.snake4}
-          alt=""
-          width={630}
-          height={370}
-          aria-hidden="true"
-        />
+    <>
+      <ApplicationModal
+        isOpen={isModalOpen}
+        onCloseAction={() => setIsModalOpen(false)}
+      />
 
-        <Title className={styles.title}>{heading}</Title>
+      <div className={styles.section}>
+        <div className={styles.inner}>
+          <Image
+            className={styles.snake}
+            src={assetPaths.images.snake4}
+            alt=""
+            width={630}
+            height={370}
+            aria-hidden="true"
+          />
 
-        <div className={styles.columns}>
-          <div className={styles.tabList} role="group" aria-label={heading}>
-            {data.map((item, index) => (
-              <TabButton
-                key={item.key}
-                label={item.title}
-                className={clsx(
-                  styles.tab,
-                  tabClasses[index] ?? styles.tabLarge,
-                )}
-                isActive={item.key === activeItem.key}
-                onClick={() => setActiveKey(item.key)}
+          <Title className={styles.title}>{heading}</Title>
+
+          <div className={styles.columns}>
+            <div className={styles.tabList} role="group" aria-label={heading}>
+              {data.map((item, index) => (
+                <TabButton
+                  key={item.key}
+                  label={item.title}
+                  className={clsx(
+                    styles.tab,
+                    tabClasses[index] ?? styles.tabLarge,
+                  )}
+                  isActive={item.key === activeItem.key}
+                  onClick={() => setActiveKey(item.key)}
+                />
+              ))}
+            </div>
+
+            <div className={styles.panel}>
+              <MultiplyCard
+                step1={activeItem.steps.step_1}
+                step2={activeItem.steps.step_2}
+                ctaLabel={activeItem.ctaLabel}
+                onCtaClick={() => setIsModalOpen(true)}
               />
-            ))}
+
+              <Footer className={styles.footerDesktop} />
+            </div>
           </div>
 
-          <div className={styles.panel}>
-            <MultiplyCard
-              step1={activeItem.steps.step_1}
-              step2={activeItem.steps.step_2}
-              ctaLabel={activeItem.ctaLabel}
-            />
-
-            <Footer className={styles.footerDesktop} />
-          </div>
+          <Footer className={styles.footerMobile} />
         </div>
-
-        <Footer className={styles.footerMobile} />
       </div>
-    </div>
+    </>
   )
 }

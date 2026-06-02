@@ -6,12 +6,14 @@ interface MultiplyCardProps {
   step1: string
   step2: string
   ctaLabel: string
+  onCtaClick?: () => void
 }
 
 export function MultiplyCard({
                                step1,
                                step2,
                                ctaLabel,
+                               onCtaClick,
                              }: MultiplyCardProps) {
   return (
     <div className={styles.card}>
@@ -27,7 +29,7 @@ export function MultiplyCard({
         <VerticalArrowIcon />
       </div>
 
-      <ButtonSvg>
+      <ButtonSvg onClick={onCtaClick}>
         <span className={styles.ctaText}>{ctaLabel}</span>
       </ButtonSvg>
     </div>
