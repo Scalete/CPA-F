@@ -30,6 +30,32 @@
       "for_partners": "Стать партнёром"
     }
   },
+  "applicationForm": {
+    "fields": {
+      "namePlaceholder": "Ваше имя",
+      "contactMethodPlaceholder": "Способ связи",
+      "contactPlaceholder": "Ваш контакт"
+    },
+    "validation": {
+      "nameMin": "Минимум 2 символа",
+      "contactMethodRequired": "Выберите способ",
+      "contactMin": "Введите контакт",
+      "contactInvalidEmail": "Введите корректный email",
+      "contactInvalidTelegram": "Введите корректный Telegram: @username",
+      "contactInvalidPhone": "Введите корректный номер телефона"
+    },
+    "hintStartPart": "Поля со звёздочкой (",
+    "hintEndPart": ") обязательны",
+    "hintMark": "*",
+    "submit": "Отправить",
+    "submitting": "Отправляем…",
+    "close": "Закрыть",
+    "done": "Готово",
+    "success": {
+      "title": "МЫ ПОЛУЧИЛИ ВАШУ ЗАЯВКУ!",
+      "text": "Мы обработаем запрос и свяжемся с вами"
+    }
+  },
   "footer": {
     "scrollToTop": "Наверх ↑",
     "socials": {
