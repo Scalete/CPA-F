@@ -62,7 +62,8 @@
   --text-lead: 24px;
   --leading-body: 24px;
 
-  /* Layout */
+  /* Layout — min height before full-screen sections compress (desktop) */
+  --screen-min-height: 950px;
   --container-max: 1280px;
   --radius-sm: 8px;
   --radius-md: 12px;

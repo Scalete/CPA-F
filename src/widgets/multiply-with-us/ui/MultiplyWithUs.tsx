@@ -66,7 +66,7 @@ export async function MultiplyWithUs() {
     <section className="relative bg-brand-mid overflow-hidden sm:bg-gradient-brand text-text">
       <div className="absolute inset-0 bg-gradient-overlay" />
 
-      <LayoutContainer>
+      <LayoutContainer className="flex flex-col">
         <MultiplySectionView
           heading={t('heading')}
           data={resolvedItems}
