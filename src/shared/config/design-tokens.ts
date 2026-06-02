@@ -43,4 +43,5 @@ export const designTokens = {
   container: {
     maxWidth: '1280px',
   },
+  screenMinHeight: '650px',
 } as const
