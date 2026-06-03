@@ -97,6 +97,3 @@ h6 {
   background: var(--color-accent);
   color: var(--color-accent-foreground);
 }
-
-@layer components {
-}

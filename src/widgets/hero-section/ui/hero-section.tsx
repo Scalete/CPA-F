@@ -17,8 +17,8 @@ import { Title } from '@shared/ui/title'
 const navItems = ['team', 'benefits', 'join'] as const
 const mobileNavItems = ['main', 'team', 'benefits', 'join'] as const
 
-export function HomeSection() {
-  const t = useTranslations('home')
+export function HeroSection() {
+  const t = useTranslations('heroSection')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
@@ -41,12 +41,16 @@ export function HomeSection() {
             <LogoSvg className="w-11 h-6 sm:w-11 sm:h-10 text-white" />
           </Link>
 
-          <nav className="hidden items-center gap-10 lg:flex">
-            {navItems.map((item) => (
-              <LinkButton key={item} href={`#${item}`} variant="nav">
-                {t(`nav.${item}`)}
-              </LinkButton>
-            ))}
+          <nav className="hidden lg:flex lg:items-center lg:gap-10">
+            <ul className="flex items-center gap-10">
+              {navItems.map((item) => (
+                <li key={item}>
+                  <LinkButton href={`#${item}`} variant="nav">
+                    {t(`nav.${item}`)}
+                  </LinkButton>
+                </li>
+              ))}
+            </ul>
             <LanguageSwitcher />
           </nav>
 
@@ -136,17 +140,20 @@ export function HomeSection() {
         </div>
 
         <div className="flex flex-col items-center my-auto">
-          <nav className="flex flex-col items-center gap-14">
-            {mobileNavItems.map((item) => (
-              <LinkButton
-                key={item}
-                href={`#${item}`}
-                onClick={() => setIsMenuOpen(false)}
-                variant="nav-mobile"
-              >
-                {t(`nav.${item}`)}
-              </LinkButton>
-            ))}
+          <nav>
+            <ul className="flex flex-col items-center gap-14">
+              {mobileNavItems.map((item) => (
+                <li key={item}>
+                  <LinkButton
+                    href={`#${item}`}
+                    onClick={() => setIsMenuOpen(false)}
+                    variant="nav-mobile"
+                  >
+                    {t(`nav.${item}`)}
+                  </LinkButton>
+                </li>
+              ))}
+            </ul>
           </nav>
 
           <div className="mt-14 flex items-center justify-center gap-7">

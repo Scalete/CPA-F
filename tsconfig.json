@@ -16,7 +16,7 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "@app/*":      ["./src/app/*"],
-      "@pages/*":    ["./src/pages/*"],
+      "@screens/*":  ["./src/screens/*"],
       "@widgets/*":  ["./src/widgets/*"],
       "@features/*": ["./src/features/*"],
       "@entities/*": ["./src/entities/*"],
