@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+import { getMessages, setRequestLocale } from 'next-intl/server'
 
+import { DocumentLang } from '@app/providers/document-lang'
 import { locales } from '@shared/config/i18n'
 import type { Locale } from '@shared/types'
 
@@ -18,9 +19,14 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const { locale } = await params
   if (!locales.includes(locale)) notFound()
 
+  setRequestLocale(locale)
+
   const messages = await getMessages()
 
   return (
-    <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+    <NextIntlClientProvider locale={locale} messages={messages}>
+      <DocumentLang />
+      {children}
+    </NextIntlClientProvider>
   )
 }

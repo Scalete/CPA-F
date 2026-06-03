@@ -26,7 +26,7 @@ const eslintConfig = defineConfig([
 
       'boundaries/elements': [
         { type: 'app', pattern: 'src/app/**' },
-        { type: 'pages', pattern: 'src/pages/**' },
+        { type: 'screens', pattern: 'src/screens/**' },
         { type: 'widgets', pattern: 'src/widgets/**' },
         { type: 'features', pattern: 'src/features/**' },
         { type: 'entities', pattern: 'src/entities/**' },
@@ -44,10 +44,10 @@ const eslintConfig = defineConfig([
           rules: [
             {
               from: 'app',
-              allow: ['pages', 'widgets', 'features', 'entities', 'shared'],
+              allow: ['screens', 'widgets', 'features', 'entities', 'shared'],
             },
             {
-              from: 'pages',
+              from: 'screens',
               allow: ['widgets', 'features', 'entities', 'shared'],
             },
             {
@@ -81,7 +81,7 @@ const eslintConfig = defineConfig([
           ],
           pathGroups: [
             { pattern: '@app/**', group: 'internal', position: 'after' },
-            { pattern: '@pages/**', group: 'internal', position: 'after' },
+            { pattern: '@screens/**', group: 'internal', position: 'after' },
             { pattern: '@widgets/**', group: 'internal', position: 'after' },
             { pattern: '@features/**', group: 'internal', position: 'after' },
             { pattern: '@entities/**', group: 'internal', position: 'after' },

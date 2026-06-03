@@ -31,12 +31,9 @@ function getLinkButtonClassName(
 }
 
 export function LinkButton(props: LinkButtonProps) {
-  const { active = false, children, className, variant = 'nav', ...rest } = props
-  const classes = getLinkButtonClassName(variant, active, className)
-
-  if (rest.as === 'button') {
-    const { as, ...buttonProps } = rest
-    void as
+  if (props.as === 'button') {
+    const { active = false, children, className, variant = 'nav', ...buttonProps } = props
+    const classes = getLinkButtonClassName(variant, active, className)
 
     return (
       <button className={classes} type="button" {...buttonProps}>
@@ -45,8 +42,8 @@ export function LinkButton(props: LinkButtonProps) {
     )
   }
 
-  const { as, href, ...anchorProps } = rest
-  void as
+  const { active = false, children, className, variant = 'nav', href, ...anchorProps } = props
+  const classes = getLinkButtonClassName(variant, active, className)
 
   return (
     <a className={classes} href={href} {...anchorProps}>

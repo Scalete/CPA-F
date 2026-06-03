@@ -62,20 +62,20 @@ NEXT_PUBLIC_API_KEY=<ваш ключ>
 
 Импорты только **снизу вверх** и только через **Public API** (`index.ts` слайса):
 
-`shared` → `entities` → `features` → `widgets` → `pages` → `app`
+`shared` → `entities` → `features` → `widgets` → `screens` → `app`
 
 ### Слои
 
 | Слой         | Путь            | Роль                                                |
 | ------------ | --------------- | --------------------------------------------------- |
 | **app**      | `src/app/`      | Провайдеры, глобальные стили                        |
-| **pages**    | `src/pages/`    | Композиция экрана из виджетов                       |
+| **screens**  | `src/screens/`  | Композиция экрана из виджетов                       |
 | **widgets**  | `src/widgets/`  | Крупные блоки (header, секции…)                     |
 | **features** | `src/features/` | Действия пользователя (форма, переключатель языка…) |
 | **entities** | `src/entities/` | Бизнес-сущности (benefit, …)                        |
 | **shared**   | `src/shared/`   | API, UI-kit, иконки, assets, config, lib, types     |
 
-Слои **pages, widgets, features, entities** делятся на сегменты:
+Слои **screens, widgets, features, entities** делятся на сегменты:
 
 - `ui` — компоненты
 - `model` — состояние, типы
@@ -91,36 +91,35 @@ src/shared/
 ├── assets/          # пути к public/assets (paths.ts)
 └── ui/
     └── icon/        # SVG → React (ui/*Icon.tsx, model/types.ts)
-public/assets/
-├── images/          # PNG, JPG, WebP
-└── icons/           # растровые иконки
+public/
+├── assets/
+│   ├── images/      # PNG, JPG, WebP
+│   └── icons/       # растровые иконки
+└── icons/           # статические SVG (file.svg и т.д.)
 ```
 
 ### Next.js + FSD
 
-Два разных «pages»:
+Маршруты — в `app/`, композиция экрана — в `src/screens/` (имя **screens**, чтобы не конфликтовать с Pages Router и `app/**/page.tsx`):
 
 ```
-├── app/                 # Next.js App Router (URL → файлы)
+├── app/
 │   └── [locale]/
-│       └── page.tsx     # реэкспорт из FSD pages
-├── pages/               # пустая папка Next.js (см. pages/README.md)
+│       └── page.tsx     # реэкспорт из FSD screens
 └── src/
-    └── pages/           # FSD pages — композиция UI
+    └── screens/
         └── home/
 ```
 
-`app/[locale]/page.tsx` только связывает маршрут с FSD-страницей:
+`app/[locale]/page.tsx` только связывает маршрут с экраном:
 
 ```ts
-export { HomePage as default } from '@pages/home'
+export { HomeScreen as default } from '@screens/home'
 ```
-
-Пустая корневая `pages/` нужна, чтобы Next.js **не** принимал `src/pages` за Pages Router ([документация FSD](https://feature-sliced.design/docs/guides/tech/with-nextjs)).
 
 ### Алиасы
 
-`@app`, `@pages`, `@widgets`, `@features`, `@entities`, `@shared` — в `tsconfig.json` и `next.config.ts`.
+`@app`, `@screens`, `@widgets`, `@features`, `@entities`, `@shared` — в `tsconfig.json` и `next.config.ts`.
 
 ### Ассеты и иконки
 
@@ -128,6 +127,7 @@ export { HomePage as default } from '@pages/home'
 | ------------------------ | ------------------------ | ----------------------------------------- |
 | Изображения PNG/JPG/WebP | `public/assets/images/`  | `next/image`, пути через `@shared/assets` |
 | Растровые иконки         | `public/assets/icons/`   | `next/image` или `<img>`                  |
+| Статические SVG          | `public/icons/`          | URL `/icons/…`, `assetPaths.icons`        |
 | SVG как React-компоненты | `src/shared/ui/icon/ui/` | `@shared/ui/icon`                         |
 
 **SVG:** один файл = один компонент `*Icon.tsx`, общий тип `IconProps`. Пример — `ChevronDownIcon`. Новую иконку добавляете в `ui/`, экспортируете из `src/shared/ui/icon/index.ts`.

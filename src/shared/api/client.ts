@@ -20,7 +20,6 @@ function attachErrorInterceptor(instance: AxiosInstance): AxiosInstance {
   return instance
 }
 
-/** Client for routes without locale prefix (e.g. POST /form). */
 export const apiClient = attachErrorInterceptor(
   axios.create({
     baseURL: API_URL,
@@ -28,7 +27,6 @@ export const apiClient = attachErrorInterceptor(
   })
 )
 
-/** Client with locale segment in base URL (e.g. GET /en/benefits). */
 export function createLocaleApiClient(locale: ApiLocale = 'en'): AxiosInstance {
   return attachErrorInterceptor(
     axios.create({

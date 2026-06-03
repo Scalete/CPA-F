@@ -10,6 +10,8 @@ export const assetPaths = {
     snakeWithDiamond: '/assets/images/snake-with-diamond.png',
   },
   icons: {
+    file: '/icons/file.svg',
+    window: '/icons/window.svg',
     // telegram: '/assets/icons/telegram.png',
   },
 } as const

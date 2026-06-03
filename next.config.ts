@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       '@app': path.resolve(dir, 'src/app'),
-      '@pages': path.resolve(dir, 'src/pages'),
+      '@screens': path.resolve(dir, 'src/screens'),
       '@widgets': path.resolve(dir, 'src/widgets'),
       '@features': path.resolve(dir, 'src/features'),
       '@entities': path.resolve(dir, 'src/entities'),
