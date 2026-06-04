@@ -1,0 +1,184 @@
+.section {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  padding: 60px 0 9px;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  max-height: 900px;
+}
+
+.snake {
+  position: absolute;
+  left: -60px;
+  bottom: -190px;
+
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.title {
+  flex-shrink: 0;
+  margin: 0 0 60px;
+  color: #fff06a;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.columns {
+  display: flex;
+  flex: 1;
+  gap: 18px;
+  min-height: 0;
+}
+
+.tabList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  width: 100%;
+  max-width: 563px;
+}
+
+.tabSmall {
+  margin-right: 22.5%;
+}
+
+.tabMedium {
+  margin-right: 13.5%;
+}
+
+.tabLarge {
+  margin-right: 7%;
+}
+
+.panel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 70px;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+.footerMobile {
+  display: none;
+}
+
+@media (max-height: 900px), (max-width: 1024px) {
+  .inner {
+    height: 100%;
+  }
+}
+
+@media (max-height: 830px), (max-width: 1330px) {
+  .snake {
+    display: none;
+  }
+
+  .footerDesktop {
+    display: none;
+  }
+
+  .footerMobile {
+    display: flex;
+  }
+}
+
+@media (max-width: 1330px) {
+  .tabList {
+    width: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 90px 0 20px;
+  }
+
+  .inner {
+    max-height: none;
+  }
+
+  .title {
+    order: 2;
+
+    margin: 0;
+    padding-top: 31px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .columns {
+    order: 1;
+
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .tabList {
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+  }
+
+  .tab {
+    align-self: center;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .tabSmall {
+    max-width: 259px;
+  }
+
+  .tabMedium {
+    max-width: 290px;
+  }
+
+  .tabLarge {
+    max-width: 314px;
+  }
+
+  .panel {
+    flex: 1;
+    gap: 12px;
+  }
+
+  .footerDesktop,
+  .footerMobile,
+  .snake {
+    display: none;
+  }
+}
+
+@media (max-width: 480px), ((max-height: 780px) and (width <= 1024px)) {
+  .columns {
+    gap: 12px;
+  }
+
+  .tabList {
+    gap: 6px;
+  }
+}

@@ -1,0 +1,34 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-display), sans-serif;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:disabled {
+    background: var(--color-text-subtle);
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+  }
+}
+
+.primary {
+  padding: 9px 40px;
+  background: var(--color-accent);
+  font-size: 14px;
+  font-weight: 500;
+  color: #0c090e;
+  letter-spacing: 0.02em;
+
+  &:hover:not(:disabled) {
+    background: var(--color-brand-main);
+    color: var(--color-text);
+  }
+}

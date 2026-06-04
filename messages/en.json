@@ -1,5 +1,70 @@
 {
-  "home": {
-    "hello": "Hello World"
+  "heroSection": {
+    "nav": {
+      "main": "Main",
+      "team": "Team",
+      "benefits": "Benefits",
+      "join": "Join Us"
+    },
+    "menu": {
+      "open": "Open menu",
+      "close": "Close menu",
+      "mobile": "Menu"
+    },
+    "hero": {
+      "title": "PRACTICE MAKES PROFIT",
+      "description": "We provide effective solutions, tested and refined on our own products and ad budgets",
+      "primaryCta": "Get in touch"
+    }
+  },
+  "multiTasksSection": {
+    "heading": "Multi-Tasks"
+  },
+  "multiplySection": {
+    "heading": "Multiply With Us",
+    "audience": {
+      "for_media_buyers": "For Media Buyers",
+      "for_businesses": "For Businesses",
+      "for_partners": "For Partners"
+    },
+    "cta": {
+      "for_media_buyers": "Join the team",
+      "for_businesses": "Launch now",
+      "for_partners": "Partner up"
+    }
+  },
+  "applicationForm": {
+    "fields": {
+      "namePlaceholder": "Your Name",
+      "contactMethodPlaceholder": "Contact Method",
+      "contactPlaceholder": "Your Contact"
+    },
+    "validation": {
+      "nameMin": "Minimum 2 characters",
+      "contactMethodRequired": "Select a method",
+      "contactMin": "Enter your contact",
+      "contactInvalidEmail": "Enter a valid email address",
+      "contactInvalidTelegram": "Enter a valid Telegram username starting with @",
+      "contactInvalidPhone": "Enter a valid phone number"
+    },
+    "hintStartPart": "Fields with an asterisk (",
+    "hintEndPart": ") are mandatory",
+    "hintMark": "*",
+    "submit": "Submit",
+    "submitting": "Sending…",
+    "close": "Close",
+    "done": "Done",
+    "success": {
+      "title": "WE HAVE RECEIVED YOUR APPLICATION!",
+      "text": "We will process your request\nand get in touch with you"
+    }
+  },
+  "footer": {
+    "scrollToTop": "Scroll to Top",
+    "socials": {
+      "instagram": "instagram",
+      "telegram": "telegram",
+      "linkedin": "linkedin"
+    }
   }
 }

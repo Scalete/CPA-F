@@ -1,11 +1,2 @@
-'use client'
-
-import { ReactNode } from 'react'
-
-interface ProvidersProps {
-  children: ReactNode
-}
-
-export function Providers({ children }: ProvidersProps) {
-  return <>{children}</>
-}
+export { Providers } from './providers'
+export { IntlProvider } from './intl-provider'

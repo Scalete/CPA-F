@@ -1,21 +1,23 @@
+import path from 'node:path'
+
 import type { NextConfig } from 'next'
 import createNextIntlPlugin from 'next-intl/plugin'
 
 const withNextIntl = createNextIntlPlugin('./src/shared/config/i18n.ts')
 
 const nextConfig: NextConfig = {
-  webpack(config) {
+  webpack(config, { dir }) {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@app':      require('path').resolve(__dirname, 'src/app'),
-      '@pages':    require('path').resolve(__dirname, 'src/pages'),
-      '@widgets':  require('path').resolve(__dirname, 'src/widgets'),
-      '@features': require('path').resolve(__dirname, 'src/features'),
-      '@entities': require('path').resolve(__dirname, 'src/entities'),
-      '@shared':   require('path').resolve(__dirname, 'src/shared'),
+      '@app': path.resolve(dir, 'src/app'),
+      '@screens': path.resolve(dir, 'src/screens'),
+      '@widgets': path.resolve(dir, 'src/widgets'),
+      '@features': path.resolve(dir, 'src/features'),
+      '@entities': path.resolve(dir, 'src/entities'),
+      '@shared': path.resolve(dir, 'src/shared'),
     }
     return config
-  }
+  },
 }
 
 export default withNextIntl(nextConfig)

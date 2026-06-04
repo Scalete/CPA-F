@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
-import { NextIntlClientProvider } from 'next-intl'
-import { getMessages } from 'next-intl/server'
+import { getMessages, setRequestLocale } from 'next-intl/server'
+
+import { IntlProvider } from '@app/providers'
 
 import { locales } from '@shared/config/i18n'
 import type { Locale } from '@shared/types'
@@ -16,11 +17,16 @@ export function generateStaticParams() {
 
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
   const { locale } = await params
+
   if (!locales.includes(locale)) notFound()
+
+  setRequestLocale(locale)
 
   const messages = await getMessages()
 
   return (
-    <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+    <IntlProvider locale={locale} messages={messages}>
+      {children}
+    </IntlProvider>
   )
 }

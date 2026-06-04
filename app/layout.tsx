@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
+import { headers } from 'next/headers'
 
 import { Providers } from '@app/providers'
+
+import { defaultLocale } from '@shared/config/i18n'
 import '@app/styles/globals.css'
 
 const stolzl = localFont({
@@ -29,12 +32,14 @@ export const metadata: Metadata = {
   description: 'CPA Network Platform',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = (await headers()).get('x-next-intl-locale') ?? defaultLocale
+
   return (
-    <html lang="en" className={`${stolzl.variable} ${halvarBreit.variable}`}>
-      <body className="font-sans antialiased">
-        <Providers>{children}</Providers>
-      </body>
+    <html lang={locale} suppressHydrationWarning className={`${stolzl.variable} ${halvarBreit.variable}`}>
+    <body className="font-sans antialiased">
+    <Providers>{children}</Providers>
+    </body>
     </html>
   )
 }

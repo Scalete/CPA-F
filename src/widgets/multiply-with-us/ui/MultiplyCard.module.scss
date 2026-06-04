@@ -1,0 +1,114 @@
+.card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-height: 0;
+  max-height: 615px;
+  padding: 112px 90px;
+
+  border-radius: 12px;
+  background: linear-gradient(
+                  125.5deg,
+                  var(--color-brand-bright) 5.95%,
+                  var(--color-brand-dark) 98.4%
+  );
+
+  color: var(--color-text);
+  text-align: center;
+}
+
+.cardText {
+  margin: 0;
+
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(15px, 1.4vw, 20px);
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.arrowDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-bg-deep);
+
+  svg {
+    width: 23px;
+    height: 52px;
+  }
+}
+
+.ctaText {
+  padding: 0 28px;
+}
+
+@media (max-width: 1330px), (max-height: 780px) {
+  .card {
+    padding: 50px 40px;
+  }
+
+  .arrowDivider {
+    svg {
+      height: 42px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .card {
+    max-height: none;
+    padding: 51px 90px;
+  }
+
+  .cardText {
+    font-size: 16px;
+  }
+
+  .arrowDivider {
+    svg {
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 16px;
+  }
+
+  .arrowDivider {
+    padding: 4px 0;
+
+    svg {
+      width: 30px;
+    }
+  }
+
+  .ctaText {
+    padding: 0 14px;
+  }
+}
+
+@media (max-width: 480px), ((max-height: 780px) and (width <= 1024px)) {
+  .card {
+    gap: 6px;
+  }
+
+  .cardText {
+    font-size: 14px;
+  }
+
+  .arrowDivider {
+    height: 30px;
+
+    svg {
+      height: 30px;
+    }
+  }
+}
