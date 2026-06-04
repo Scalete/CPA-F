@@ -10,8 +10,8 @@ import { LogoSvg } from '@shared/ui/icon'
 import { Input } from '@shared/ui/input'
 import { Select } from '@shared/ui/select'
 
-import { createApplicationSchema, type ApplicationFormInput } from '../model/schema'
 import styles from './ApplicationModal.module.scss'
+import { createApplicationSchema, type ApplicationFormInput } from '../model/schema'
 
 interface ApplicationModalProps {
   isOpen: boolean

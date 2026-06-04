@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import { getMessages, setRequestLocale } from 'next-intl/server'
 
 import { IntlProvider } from '@app/providers'
+
 import { locales } from '@shared/config/i18n'
 import type { Locale } from '@shared/types'
 

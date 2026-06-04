@@ -1,6 +1,7 @@
 'use client'
 
 import { clsx } from 'clsx'
+import { forwardRef } from 'react'
 import type { ButtonHTMLAttributes } from 'react'
 
 import { ArrowIcon } from '@shared/ui/icon'
@@ -12,18 +13,15 @@ interface TabButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   isActive?: boolean
 }
 
-export function TabButton({
-                            label,
-                            isActive = false,
-                            className,
-                            disabled,
-                            ...props
-                          }: TabButtonProps) {
+export const TabButton = forwardRef<HTMLButtonElement, TabButtonProps>(function TabButton(
+  { label, isActive = false, className, disabled, ...props },
+  ref,
+) {
   return (
     <button
+      ref={ref}
       type='button'
       disabled={disabled}
-      aria-pressed={isActive}
       className={clsx(
         styles.tabButton,
         {
@@ -34,7 +32,7 @@ export function TabButton({
       {...props}
     >
       {label}
-      <ArrowIcon/>
+      <ArrowIcon />
     </button>
   )
-}
+})

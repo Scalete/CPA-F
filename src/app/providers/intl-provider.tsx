@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react'
 import { AbstractIntlMessages, NextIntlClientProvider } from 'next-intl'
+import type { ReactNode } from 'react'
 
 import { DocumentLang } from './document-lang'
 

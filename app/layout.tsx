@@ -3,6 +3,7 @@ import localFont from 'next/font/local'
 import { headers } from 'next/headers'
 
 import { Providers } from '@app/providers'
+
 import { defaultLocale } from '@shared/config/i18n'
 import '@app/styles/globals.css'
 

@@ -1,6 +1,7 @@
 import { setRequestLocale } from 'next-intl/server'
 
 import { HomeScreen } from '@screens/home'
+
 import type { Locale } from '@shared/types'
 
 interface HomePageProps {
