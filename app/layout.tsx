@@ -36,9 +36,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang={locale} suppressHydrationWarning className={`${stolzl.variable} ${halvarBreit.variable}`}>
-      <body className="font-sans antialiased">
-        <Providers>{children}</Providers>
-      </body>
+    <body className="font-sans antialiased">
+    <Providers>{children}</Providers>
+    </body>
     </html>
   )
 }
