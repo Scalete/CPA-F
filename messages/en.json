@@ -59,6 +59,10 @@
       "text": "We will process your request\nand get in touch with you"
     }
   },
+  "notFoundPage": {
+    "cta": "Oops, Take Me Back",
+    "ctaMobile": "Take Me Back"
+  },
   "footer": {
     "scrollToTop": "Scroll to Top",
     "socials": {
