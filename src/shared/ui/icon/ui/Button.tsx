@@ -10,7 +10,7 @@ export const ButtonSvg: FC<ButtonProps> = ({ children = '', className = '', ...p
   return (
     <button
       className={clsx(
-        'group relative inline-flex h-[62px] sm:h-[76px] min-w-[200px] items-center justify-center px-8 py-0',
+        'group relative inline-flex h-[62px] sm:h-[82px] min-w-[200px] items-center justify-center px-8 py-0',
         'transition-transform duration-150 ease-out',
         'active:scale-[0.97] active:translate-y-0.5 active:duration-75',
         'motion-reduce:active:scale-100 motion-reduce:active:translate-y-0',
